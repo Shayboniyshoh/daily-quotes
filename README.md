@@ -1,10 +1,10 @@
 # Flutter Quotes App using JSON text inside Dart file
 
-This is my 8th Flutter project
+This is my another Flutter project
 
 ## Here is the results
 
-![local json quote app](https://user-images.githubusercontent.com/74512232/168422669-0d809033-c2f8-4922-8d9d-a8116d16a212.gif)
+![Screenshot 2022-05-17 113756](https://user-images.githubusercontent.com/47345004/168745404-471f8057-d4b0-4277-8123-69a5dd0b10a9.png)
 
 
 
