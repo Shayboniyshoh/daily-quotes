@@ -44,53 +44,69 @@ class _QuotesLocalState extends State<QuotesLocal> {
         appBar: AppBar(
           elevation: 3.0,
           backgroundColor: Colors.lightBlueAccent,
-          title: const Text(
+          title: Text(
             "Daily Quotes",
-            textAlign: TextAlign.center,
             style: TextStyle(
-              fontSize: 16,
+              fontSize: 18,
               fontWeight: FontWeight.bold,
+              color: Colors.grey.shade100,
             ),
           ),
         ),
-        backgroundColor: Colors.black,
-        body: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.all(30),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                Text(
-                  quote,
-                  style: GoogleFonts.alata(
-                    color: Colors.white,
-                    fontSize: 35,
+        backgroundColor: Colors.blueGrey.shade900,
+        body: SingleChildScrollView(
+          child: SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.all(30),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Text(
+                    quote,
+                    style: GoogleFonts.alata(
+                      color: Colors.grey.shade300,
+                      fontSize: 35,
+                    ),
                   ),
-                ),
-                Text(
-                  author,
-                  style: GoogleFonts.lobster(
-                    color: Colors.white,
-                    fontSize: 25,
+                  const SizedBox(height: 20),
+                  Text(
+                    author,
+                    style: GoogleFonts.lobster(
+                      color: Colors.white70,
+                      fontSize: 25,
+                    ),
                   ),
-                ),
-              ],
-            ),
-          ),
-        ),
-        bottomSheet: Column(
-          children: [
-            Center(
-              child: TextButton(
-                child: Image.asset(
-                  'assets/shuffle.png',
-                  width: 100,
-                ),
-                onPressed: setQuote,
+                ],
               ),
             ),
-          ],
+          ),
+        ),
+        bottomNavigationBar: BottomAppBar(
+          shape: const CircularNotchedRectangle(),
+          elevation: 4,
+          color: Colors.blueGrey.shade900,
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: SizedBox(
+              height: 80,
+              child: Column(
+                children: [
+                  Center(
+                    child: TextButton(
+                      child: Image.asset(
+                        'assets/shuffle.png',
+                        width: 80,
+                        height: 60,
+                        fit: BoxFit.contain,
+                      ),
+                      onPressed: setQuote,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
         ),
       ),
     );
